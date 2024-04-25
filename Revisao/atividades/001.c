@@ -1,7 +1,7 @@
 #include <stdio.h>
 // Aluno: Victor Querino Martins
 
-main(){
+int main(){
     int c; 
     c = 5;
     printf("%d \n", c);
