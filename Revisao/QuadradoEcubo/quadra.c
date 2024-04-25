@@ -13,6 +13,7 @@ QuadradoEcubo criarCubo(float num, float num1, float num2){
     QuadradoEcubo cubo;
     cubo.num = num;
     cubo.num1 = num1;
+    cubo.num2 = num2;
     return cubo;
 }
 
