@@ -1,14 +1,12 @@
 #include <stdio.h>
-#include<stdlib.h>
 #include "retan.h"
+int main(){
+    //Exemplo do uso TAD retangulo
+    Retangulo meuRetangulo = criarRetangulo(5.0, 3.0); //comprimento 5, largura 3
 
-Retangulo criarRetangulo(float comprimento, float largura){
-    Retangulo ret;
-    ret.comprimento = comprimento;
-    ret.largura = largura;
-    return ret;
-}
+    //Calculando e exibindo a área do retângilo
+    float area = calcularArea(meuRetangulo);
+    printf("A area do meu retangulo eh: %.2f \n", area);
 
-float calcularArea(Retangulo ret){
-    return ret.comprimento * ret.largura;
+    return 0;
 }
