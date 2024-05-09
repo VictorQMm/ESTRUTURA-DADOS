@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/yguin/OneDrive/Documentos/GitHub/ESTRUTURA-DADOS/Revisao/QuadradoEcubo",
-      "program": "c:/Users/yguin/OneDrive/Documentos/GitHub/ESTRUTURA-DADOS/Revisao/QuadradoEcubo/build/Debug/outDebug",
+      "cwd": "c:/Users/yguin/OneDrive/Documentos/GitHub/ESTRUTURA-DADOS/Revisao/Ponteiros",
+      "program": "c:/Users/yguin/OneDrive/Documentos/GitHub/ESTRUTURA-DADOS/Revisao/Ponteiros/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
