@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/yguin/OneDrive/Documentos/GitHub/ESTRUTURA-DADOS/Revisao/Vetores",
-      "program": "c:/Users/yguin/OneDrive/Documentos/GitHub/ESTRUTURA-DADOS/Revisao/Vetores/build/Debug/outDebug",
+      "cwd": "c:/Users/yguin/OneDrive/Documentos/GitHub/ESTRUTURA-DADOS/Revisao/Atividades",
+      "program": "c:/Users/yguin/OneDrive/Documentos/GitHub/ESTRUTURA-DADOS/Revisao/Atividades/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
