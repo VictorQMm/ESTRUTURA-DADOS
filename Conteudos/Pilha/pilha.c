@@ -10,16 +10,6 @@ typedef struct{
     Data data;
 }Pessoa;
 
-typedef struct no{
-    Pessoa p;
-    struct no *proximo;
-}No;
-
-typedef struct{
-    No *topo;
-    int tam;
-}Pilha;
-
 Pessoa ler_pessoa(){
     Pessoa p;
     printf("\nDigite nome (enter), e data de nascimento dd (enter) mm (enter) aaaa (enter):\n");
@@ -30,13 +20,23 @@ Pessoa ler_pessoa(){
 void imprimir_pessoa(Pessoa p){
     printf("\nNome: %s\nData: %2d/%2d/%4d\n", p.nome, p.data.dia, p.data.mes, p.data.ano);
 }
+typedef struct no{
+    Pessoa p;
+    struct no *proximo;
+}No;
+
+typedef struct{
+    No *topo;
+    int tam;
+}Pilha;
+
 
 void criar_pilha(Pilha *p){
     p -> topo = NULL;
     p -> tam = 0;
 }
 
-void empilhar(Pilha *p){
+void empilhar(Pilha *p){            //[push]
     No *novo = malloc(sizeof(No));
 
     if(novo){
