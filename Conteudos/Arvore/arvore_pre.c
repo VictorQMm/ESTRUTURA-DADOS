@@ -61,11 +61,11 @@ int tamanho(No *raiz) {
     return 1 + tamanho(raiz->esquerda) + tamanho(raiz->direita); // Conta o nó atual e os nós à esquerda e à direita
 }
 
-// Função para imprimir a árvore em ordem
+// Função para imprimir a árvore em pre-ordem
 void imprimir(No *raiz) {
     if (raiz != NULL) {
-        imprimir(raiz->esquerda); 
         printf("%d  ", raiz->conteudo); 
+        imprimir(raiz->esquerda); 
         imprimir(raiz->direita); 
     }
 }
@@ -90,7 +90,7 @@ int main() {
                 break;
             case 2:
                 printf("\nImpressao da arvore:\n");
-                imprimir(arv.raiz);
+                imprimir(arv.raiz); 
                 printf("\n");
                 printf("\nTamanho: %d \n", tamanho(arv.raiz)); 
                 break;
