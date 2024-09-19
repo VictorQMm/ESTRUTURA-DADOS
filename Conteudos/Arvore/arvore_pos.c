@@ -74,7 +74,7 @@ int main() {
     int op, valor;
     ArvB arv;
     arv.raiz = NULL; 
-
+ 
     do {
         printf("\n0 - sair\n1 - inserir\n2 - imprimir\n3 - Buscar\n4 - Remover\n");
         scanf("%d", &op);

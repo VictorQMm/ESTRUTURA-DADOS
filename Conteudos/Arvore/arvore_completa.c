@@ -98,6 +98,51 @@ void verifica(No *raiz){
     }
 }
 
+No* remover(No *raiz, int chave) {
+    if (raiz == NULL) {
+        printf("Valor nao encontrado!\n");
+        return NULL;
+    } else {
+        if (raiz->conteudo == chave) {
+            // Caso 1: Nó folha
+            if (raiz->esquerda == NULL && raiz->direita == NULL) {
+                free(raiz);
+                printf("Elemento folha removido: %d!\n", chave);
+                return NULL;
+            }
+            // Caso 2: Nó com apenas um filho
+            else if (raiz->esquerda == NULL) {
+                No* temp = raiz->direita;
+                free(raiz);
+                printf("Elemento com um filho removido: %d!\n", chave);
+                return temp;
+            } else if (raiz->direita == NULL) {
+                No* temp = raiz->esquerda;
+                free(raiz);
+                printf("Elemento com um filho removido: %d!\n", chave);
+                return temp;
+            }
+            // Caso 3: Nó com dois filhos
+            else {
+                No* sucessor = raiz->direita;
+                // Encontrando o sucessor (menor elemento da subárvore direita)
+                while (sucessor->esquerda != NULL) {
+                    sucessor = sucessor->esquerda;
+                }
+                // Substitui o conteúdo do nó pelo sucessor
+                raiz->conteudo = sucessor->conteudo;
+                // Remove o sucessor recursivamente
+                raiz->direita = remover(raiz->direita, sucessor->conteudo);
+            }
+        } else if (chave < raiz->conteudo) {
+            raiz->esquerda = remover(raiz->esquerda, chave);
+        } else {
+            raiz->direita = remover(raiz->direita, chave);
+        }
+        return raiz;
+    }
+}
+
 int main() {
     int op, valor;
     ArvB arv;
@@ -131,6 +176,13 @@ int main() {
                 printf("\nImpressao da arvore em pos-ordem:\n");
                 imprimirpos(arv.raiz);
                 verifica(arv.raiz);
+                printf("\n");
+                break;
+            
+            case 6:
+                printf("\nRemover folha: ");
+                scanf("%d", &valor);
+                arv.raiz = remover(arv.raiz, valor);
                 printf("\n");
                 break;
         }
